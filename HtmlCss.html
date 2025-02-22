@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML CSS 25 MARKS TEST</title>
+    <title>HTML CSS 50 MARKS TEST</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
@@ -225,7 +225,7 @@
 </head>
 <body>
     
-    <nav class="navbar"><img src="next-academy-logo.png" alt=""> <h1>HTML CSS TEST</h1> <button>25 Marks</button></nav>
+    <nav class="navbar"><img src="next-academy-logo.png" alt=""> <h1>HTML CSS TEST</h1> <button>50 Marks</button></nav>
 
     <!-- Popup to collect student details -->
     <div id="student-popup" class="form-container">
@@ -243,7 +243,7 @@
     <div class="quiz-container" style="display:none;">
 
         <!-- timer  -->
-        <div class="timer" id="timer">Time Left: 10:00</div>
+        <div class="timer" id="timer">Time Left: 20:00</div>
 
         <!-- Questions Attached in HTML -->
         <div id="quiz-content"></div>
@@ -253,7 +253,7 @@
 
     <!-- Result Popup -->
     <div id="result-popup" class="result-popup">
-        <button class="course Name">HTML CSS (25 MARKS)</button>
+        <button class="course Name">HTML CSS (50 MARKS)</button>
         <h2><span id="student-name-result"></span></h2>
         <div class="result-info">
             <p id="result-msg"></p>
@@ -276,7 +276,7 @@
 
     <script>
         // Timer Setup
-        let timeLeft = 10 * 60; // 20 minutes in seconds
+        let timeLeft = 20 * 60; // 20 minutes in seconds
         let timer;
         let startTime;
 
@@ -297,59 +297,10 @@
 
         // Dynamic Quiz Content
         const questions = [
-        
-
-    
-        
     {
         "question": "Which HTML tag is used to display a horizontal line?",
         "options": ["&lt;line&gt;", "&lt;hr&gt;", "&lt;br&gt;", "&lt;hline&gt;"],
         "correct": 1
-    },
-    {
-        "question": "Which HTML tag is used to create a hyperlink?",
-        "options": ["&lt;link&gt;", "&lt;a&gt;", "&lt;href&gt;", "&lt;hyperlink&gt;"],
-        "correct": 1
-    },
-    {
-        "question": "Which HTML tag is used to define an unordered list?",
-        "options": ["&lt;ul&gt;", "&lt;ol&gt;", "&lt;li&gt;", "&lt;list&gt;"],
-        "correct": 0
-    },
-    {
-        "question": "Which CSS property is used to change the text color of an element?",
-        "options": ["text-color", "color", "foreground-color", "font-color"],
-        "correct": 1
-    },
-    {
-        "question": "Which CSS property is used to make text italic?",
-        "options": ["font-style", "text-decoration", "italic", "text-transform"],
-        "correct": 0
-    },
-    {
-        "question": "Which HTML tag is used for the largest heading?",
-        "options": ["&lt;h6&gt;", "&lt;h1&gt;", "&lt;head&gt;", "&lt;header&gt;"],
-        "correct": 1
-    },
-    {
-        "question": "Which CSS property is used to control the space between elements?",
-        "options": ["spacing", "margin", "padding", "border"],
-        "correct": 1
-    },
-    {
-        "question": "What does the 'id' attribute in HTML do?",
-        "options": ["Defines a class for multiple elements", "Gives a unique identifier to an element", "Styles the element", "Creates a hyperlink"],
-        "correct": 1
-    },
-    {
-        "question": "Which CSS property is used to make text bold?",
-        "options": ["text-weight", "bold", "font-weight", "font-bold"],
-        "correct": 2
-    },
-    {
-        "question": "Which HTML tag is used to insert an image?",
-        "options": ["&lt;img&gt;", "&lt;image&gt;", "&lt;picture&gt;", "&lt;src&gt;"],
-        "correct": 0
     },
     {
         "question": "What does CSS stand for?",
@@ -357,80 +308,122 @@
         "correct": 1
     },
     {
-        "question": "Which HTML tag is used to create a table?",
-        "options": ["&lt;tr&gt;", "&lt;table&gt;", "&lt;td&gt;", "&lt;tab&gt;"],
-        "correct": 1
+        "question": "Which HTML tag is used to define an internal style sheet?",
+        "options": ["&lt;style&gt;", "&lt;css&gt;", "&lt;link&gt;", "&lt;script&gt;"],
+        "correct": 0
     },
     {
-        "question": "Which property is used to change the background color in CSS?",
-        "options": ["color", "bgcolor", "background-color", "background"],
+        "question": "Which HTML element is used to define an unordered list?",
+        "options": ["&lt;ul&gt;", "&lt;ol&gt;", "&lt;li&gt;", "&lt;dl&gt;"],
+        "correct": 0
+    },
+    {
+        "question": "How do you make a list that is ordered?",
+        "options": ["&lt;ol&gt;", "&lt;ul&gt;", "&lt;li&gt;", "&lt;dl&gt;"],
+        "correct": 0
+    },
+    {
+        "question": "Which CSS property is used to change the font of an element?",
+        "options": ["font-style", "font-weight", "font-family", "font-size"],
         "correct": 2
     },
     {
-        "question": "Which HTML attribute is used to specify an alternate text for an image?",
-        "options": ["title", "alt", "src", "description"],
-        "correct": 1
+        "question": "Which tag is used to create a hyperlink in HTML?",
+        "options": ["&lt;a&gt;", "&lt;link&gt;", "&lt;button&gt;", "&lt;href&gt;"],
+        "correct": 0
     },
     {
-        "question": "Which of the following is NOT a valid CSS position property?",
-        "options": ["static", "relative", "center", "absolute"],
+        "question": "How do you insert a comment in CSS?",
+        "options": ["// This is a comment", "<!-- This is a comment -->", "/* This is a comment */", "# This is a comment"],
         "correct": 2
     },
     {
-        "question": "Which property is used to control the Transperancy of an element?",
-        "options": ["display", "visibility", "hide", "opacity"],
-        "correct": 3
-    },
-    {
-        "question": "Which CSS selector selects all elements with a specific class?",
-        "options": ["#", ".", "@", "*"],
+        "question": "How can you open a link in a new tab in HTML?",
+        "options": ["&lt;a href='url' target='_new'&gt;", "&lt;a href='url' target='_blank'&gt;", "&lt;a href='url' target='new'&gt;", "&lt;a href='url' target='_tab'&gt;"],
         "correct": 1
     },
     {
-        "question": "Which property is used to add shadow to text?",
-        "options": ["text-shadow", "shadow", "font-shadow", "box-shadow"],
+        "question": "Which HTML tag is used to define an image?",
+        "options": ["&lt;image&gt;", "&lt;img&gt;", "&lt;src&gt;", "&lt;picture&gt;"],
+        "correct": 1
+    },
+    {
+        "question": "Which tag is used to create a table in HTML?",
+        "options": ["&lt;table&gt;", "&lt;tab&gt;", "&lt;tr&gt;", "&lt;td&gt;"],
         "correct": 0
     },
     {
-        "question": "Which CSS property makes an element invisible but still occupies space?",
-        "options": ["display: none", "visibility: hiden", "opacity: 0", "z-index: -111"],
+        "question": "Which attribute is used to specify the destination of a link?",
+        "options": ["href", "src", "alt", "link"],
+        "correct": 0
+    },
+    {
+        "question": "What does the z-index property in CSS do?",
+        "options": ["Sets the visibility of an element", "Defines the stacking order of elements", "Sets the opacity of an element", "Defines the size of an element"],
+        "correct": 1
+    },
+    {
+        "question": "Which HTML tag is used to define a list item?",
+        "options": ["&lt;li&gt;", "&lt;ul&gt;", "&lt;ol&gt;", "&lt;item&gt;"],
+        "correct": 0
+    },
+    {
+        "question": "What is the correct syntax to link an external CSS file?",
+        "options": ["&lt;link src='style.css'&gt;", "&lt;style src='style.css'&gt;", "&lt;link rel='stylesheet' href='style.css'&gt;", "&lt;style href='style.css'&gt;"],
         "correct": 2
     },
     {
-        "question": "What is the default display property of a div element?",
-        "options": ["inline", "block", "inline-block", "none"],
+        "question": "Which CSS property is used to change the font type of an element?",
+        "options": ["font-style", "font-size", "font-family", "font-variant"],
+        "correct": 2
+    },
+    {
+        "question": "How do you add space between the content and the border of an element in CSS?",
+        "options": ["padding", "border-space", "margin", "content-spacing"],
+        "correct": 0
+    },
+    {
+        "question": "Which HTML tag is used to define a form?",
+        "options": ["&lt;input&gt;", "&lt;form&gt;", "&lt;textarea&gt;", "&lt;button&gt;"],
         "correct": 1
     },
     {
-        "question": "Which CSS pseudo-class is used to style an element when the user hovers over it?",
-        "options": [":hover", ":focus", ":active", ":visited"],
-        "correct": 0
-    },
-    {
-        "question": "Which HTML tag is used to create a line break?",
-        "options": ["&lt;br&gt;", "&lt;break&gt;", "&lt;lb&gt;", "&lt;newline&gt;"],
-        "correct": 0
-    },
-    {
-        "question": "Which CSS property is used to set the maximum width of an element?",
-        "options": ["width", "max-width", "min-width", "size"],
+        "question": "Which attribute is used to provide an alternative text for an image if the image cannot be displayed?",
+        "options": ["src", "alt", "href", "title"],
         "correct": 1
     },
     {
-        "question": "Which HTML tag is used to define metadata about a web page?",
-        "options": ["&lt;meta&gt;", "&lt;data&gt;", "&lt;info&gt;", "&lt;script&gt;"],
+        "question": "What does the CSS 'position' property do?",
+        "options": ["Defines the position of an element relative to its normal position", "Sets the position of an element on the screen", "Defines the margin of an element", "Changes the display style of an element"],
+        "correct": 1
+    },
+    {
+        "question": "Which property is used to add space between the lines of text in CSS?",
+        "options": ["line-height", "text-height", "word-spacing", "letter-spacing"],
         "correct": 0
     },
     {
-        "question": "Which attribute is used to open a hyperlink in a new tab?",
-        "options": ["target='_blank'", "open='new'", "new-tab='true'", "target='new'"],
+        "question": "How do you add a background image in CSS?",
+        "options": ["background-image: url('image.jpg');", "background: image('image.jpg');", "image-background: 'image.jpg';", "url-background: image('image.jpg');"],
+        "correct": 0
+    },
+    {
+        "question": "How can you make text italic in CSS?",
+        "options": ["font-weight: italic;", "font-style: italic;", "text-style: italic;", "font-type: italic;"],
+        "correct": 1
+    },
+    {
+        "question": "Which tag is used to define a table row in HTML?",
+        "options": ["&lt;tr&gt;", "&lt;td&gt;", "&lt;th&gt;", "&lt;tr-row&gt;"],
+        "correct": 0
+    },
+    {
+        "question": "Which property in CSS is used to set the space between the edges of an element and the content inside it?",
+        "options": ["padding", "margin", "border", "spacing"],
         "correct": 0
     }
-
-
-       
-            // Add more questions as needed
-        ];
+]
+;
 
         // Load Quiz Again
         function loadQuiz() {
